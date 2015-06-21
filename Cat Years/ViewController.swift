@@ -10,6 +10,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var resultLabel: UILabel!
+   
+    @IBAction func Findage(sender: AnyObject) {
+        
+        var enteredAge = age.text.toInt()
+        
+        if enteredAge != nil {
+        var catYears = enteredAge! * 7
+        
+       resultLabel.text = "your cat is \(catYears) in cat years "
+        }
+        else
+        {
+        resultLabel.text = "enter a number "
+        
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
